@@ -1,14 +1,14 @@
 services:
   - type: web
     name: ethiopian-const-registration
-    region: oregon  # REQUIRED FIELD ADDED
+    region: oregon
     runtime: node
-    buildCommand:
-      - npm install
-      - npm run build
+    buildCommand: |
+      npm install
+      npm run build
     startCommand: npm start
     envVars:
       - key: DATABASE_URL
-        value: "postgresql://neondb_owner:npg_JPQN7Mghr2Cn@ep-yellow-recipe-a5v6bil0-pooler.us-east-2.aws.neon.tech/ethiopina_construction_reg?sslmode=require"  # QUOTES ADDED
+        value: "postgresql://neondb_owner:npg_JPQN7Mghr2Cn@ep-yellow-recipe-a5v6bil0-pooler.us-east-2.aws.neon.tech/ethiopina_construction_reg?sslmode=require"
       - key: NODE_ENV
         value: production
