@@ -2,6 +2,7 @@ services:
   - type: web
     name: ethiopian-const-registration
     region: oregon
+    plan: free
     runtime: node
     buildCommand: |
       npm install
